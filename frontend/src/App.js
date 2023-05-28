@@ -9,6 +9,7 @@ import SignUp from './Containers/SignUp';
 import NotFound from './Components/NotFound';
 import Layout from './Hocs/Layout';
 
+import './Styles/main.scss';
 
 const App = () => (
         <Router>
