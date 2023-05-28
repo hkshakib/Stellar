@@ -4,6 +4,9 @@ from realestate.models import RealEstate
 
 
 class Listing(models.Model):
+    """
+    For avoid Ambiguity I used Seperate Variable for choices field
+    """
     FOR_SALE = 'For Sale'
     FOR_RENT = 'For Rent'
     SALE_CHOICES = [
@@ -44,6 +47,9 @@ class Listing(models.Model):
 
 
 class Photo(models.Model):
+    """
+    For Multiple Photos I create Separate Model for photos and Add listing as a foreignkey
+    """
     listing = models.ForeignKey(Listing, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='photos/%Y/%m/%d/')
 

@@ -1,8 +1,16 @@
 from rest_framework import serializers
-from .models import Listing
+from .models import Listing, Photo
+
+
+class PhotoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Photo
+        fields = '__all__'
 
 
 class ListingSerializer(serializers.ModelSerializer):
+    photos = PhotoSerializer(many=True, read_only=True)
+
     class Meta:
         model = Listing
         fields = (
@@ -11,6 +19,8 @@ class ListingSerializer(serializers.ModelSerializer):
 
 
 class ListingDetailSerializer(serializers.ModelSerializer):
+    photos = PhotoSerializer(many=True, read_only=True)
+
     class Meta:
         model = Listing
         fields = '__all__'
