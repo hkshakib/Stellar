@@ -9,22 +9,26 @@ import SignUp from './Containers/SignUp';
 import NotFound from './Components/NotFound';
 import Layout from './Hocs/Layout';
 
+import {Provider} from "react-redux";
+import Store from './Store';
 import './Styles/main.scss';
 
 const App = () => (
-        <Router>
-            <Layout>
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/about' element={<About />} />
-                    <Route path='/contact' element={<Contact />} />
-                    <Route path='/listings' element={<Listings />} />
-                    <Route path='/login' element={<Login />} />
-                    <Route path='/signup' element={<SignUp />} />
-                    <Route path='*' element={<NotFound />} />
-                </Routes>
-            </Layout>
-        </Router>
+       <Provider store={Store}>
+            <Router>
+                <Layout>
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                        <Route path='/about' element={<About />} />
+                        <Route path='/contact' element={<Contact />} />
+                        <Route path='/listings' element={<Listings />} />
+                        <Route path='/login' element={<Login />} />
+                        <Route path='/signup' element={<SignUp />} />
+                        <Route path='*' element={<NotFound />} />
+                    </Routes>
+                </Layout>
+            </Router>
+       </Provider>
 );
 
 export default App;
