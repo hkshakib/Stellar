@@ -6,7 +6,7 @@ import Contact from './Containers/Contact';
 import Listings from './Containers/Listings';
 import Login from './Containers/Login';
 import SignUp from './Containers/SignUp';
-import NotFound from './Containers/NotFound';
+import NotFound from './Components/NotFound';
 import Layout from './Hocs/Layout';
 
 
