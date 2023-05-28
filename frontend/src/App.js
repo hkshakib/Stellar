@@ -1,8 +1,9 @@
 import React from "react";
 import Layout from "./Hocs/Layout";
-function App() {
+const App=()=> {
   return (
     <Layout>
+
     </Layout>
   );
 }
