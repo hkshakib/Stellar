@@ -1,9 +1,9 @@
-function App() {
-  return (
-    <div className="App">
-      Hello World
-    </div>
-  );
-}
+import React from "react";
+import Layout from "./Hocs/Layout";
+const App = () => (
+    <Layout>
+
+    </Layout>
+);
 
 export default App;
