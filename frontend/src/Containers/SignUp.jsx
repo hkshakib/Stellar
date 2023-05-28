@@ -1,9 +1,9 @@
 import React from 'react';
-const Home = () => {
+const SignUp = () => {
     return (
         <main className='home'>
-           Home
+           SignUp
         </main>
     );
 };
-export default Home;
+export default SignUp;
