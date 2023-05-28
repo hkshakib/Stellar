@@ -3,6 +3,9 @@ from datetime import datetime
 
 
 class RealEstate(models.Model):
+    """
+    'photos/%Y/%m/%d/' means photo will saved according to upload date time.
+    """
     name = models.CharField(max_length=50)
     photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
     description = models.TextField(blank=True)
