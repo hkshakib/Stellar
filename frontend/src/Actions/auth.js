@@ -35,6 +35,34 @@ export const login = (email, password) => async dispatch => {
     }
 };
 
+// export const refreshTokens = (refreshToken) => async (dispatch) => {
+//   const config = {
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   };
+//
+//   const body = JSON.stringify({ refresh: refreshToken });
+//
+//   try {
+//     const res = await axios.post(
+//       'http://127.0.0.1:8000/api/token/refresh/',
+//       body,
+//       config
+//     );
+//
+//     dispatch({
+//       type: LOGIN_SUCCESS,
+//       payload: res.data,
+//     });
+//   } catch (err) {
+//     dispatch({
+//       type: LOGIN_FAIL,
+//     });
+//   }
+// };
+
+
 export const signup = ({ name, email, password, password2 }) => async dispatch => {
     const config = {
         headers: {
